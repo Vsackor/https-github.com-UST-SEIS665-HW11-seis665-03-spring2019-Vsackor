@@ -1,5 +1,4 @@
-<html>
-<body>
-   <h1>My class webserver</h1>
-</body>
-</html>
+FROM nginx 
+LABEL maintainer="VictorSackor sack9541@stthomas.edu"
+EXPOSE 80
+COPY  index.html /usr/share/nginx/html
