@@ -4,7 +4,7 @@ node {
         sh 'aws s3 cp s3:// cf-templates-khqlru1bms20-us-east-1/classweb.html.rtf/index.html' 
     }
     stage('Build'){
-        sh 'docker build -t classweb:1.0'
+        sh 'docker build -t classweb:1.0 .'
     }
     stage('Test'){
         sh 'docker stop classweb1||true'
